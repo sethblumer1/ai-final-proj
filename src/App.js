@@ -1,41 +1,31 @@
-import React from 'react';
 import {
-  ChakraProvider,
-  Box,
-  Text,
-  Link,
+  Flex,
   VStack,
-  Code,
-  Grid,
-  theme,
+  HStack,
+  Heading,
+  Image,
+  IconButton,
 } from '@chakra-ui/react';
-import { ColorModeSwitcher } from './ColorModeSwitcher';
-import { Logo } from './Logo';
+
+// import './App.css';
+
+// new components
+import Home from './pages/Home';
 
 function App() {
   return (
-    <ChakraProvider theme={theme}>
-      <Box textAlign="center" fontSize="xl">
-        <Grid minH="100vh" p={3}>
-          <ColorModeSwitcher justifySelf="flex-end" />
-          <VStack spacing={8}>
-            <Logo h="40vmin" pointerEvents="none" />
-            <Text>
-              Edit <Code fontSize="xl">src/App.js</Code> and save to reload.
-            </Text>
-            <Link
-              color="teal.500"
-              href="https://chakra-ui.com"
-              fontSize="2xl"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Learn Chakra
-            </Link>
-          </VStack>
-        </Grid>
-      </Box>
-    </ChakraProvider>
+    // <Router>
+    <div className="App">
+      <Home />
+      {/* <Routes> */}
+      {/* Home page with header component*/}
+      {/* <Route exact path="/" element={<Home />} />
+          <Route exact path="/scoring-system" element={<ScoringSystem />} /> */}
+      {/* <Route exact path="/data" element={<DataPage />} /> */}
+      {/* <Route exact path="/about" element={<AboutPage />} />
+        </Routes> */}
+    </div>
+    // </Router>
   );
 }
 
